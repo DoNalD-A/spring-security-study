@@ -14,7 +14,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
-        //위에서부터 깔때기 형태로 필터링된다(맨 위에 anyRequest을 허용해주면 아무 소용 없어진다
+        //위에서부터 깔때기 형태로 필터링된다(맨 위에 anyRequest() '모두 혀용'을 해주면 아무 소용 없어진다
         http
                 .authorizeHttpRequests((auth) -> auth
                         .requestMatchers("/", "/login").permitAll()
